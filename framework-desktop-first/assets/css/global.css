@@ -142,11 +142,12 @@ html {
     font-size:62.5%;/* set the browser font size to 10px */
 }
 body {
-    font-size: 14px; font-size: 1.4rem; /* set our base font size to 14px */
+    font-size: 15px; font-size: 1.5rem; /* set our base font size to 14px */
 	font-family: mainfont, arial, helvetica, sans-serif;
 	color: #272727;
     line-height: 150%;
     -webkit-animation: bugfix infinite 1s;  /* make checkbox hack work on android */
+    background-image: url('../images/texture-light.png');
 }
 @-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} } /* also to make checkbox hack work on android */
 .viewport { /* allows off canvas nav to work properly, kept as a global style as it's useful structurally */
@@ -162,7 +163,10 @@ body {
 
 
 /* ----- $Backgrounds ----- */
-    /*background-image: url('../images/texture-light.png'); */
+  /*
+    Light Texture   :   url('../images/texture-light.png'); 
+  
+  */
 
 
 
@@ -171,17 +175,22 @@ body {
 ------------------------------------------------------------ */
 
 /* ----- $PageContainers ----- */
-    .viewport { border: 1px solid blue; background: blue; }
+    .viewport { }
 
-        .containerPage { border: 1px solid green; background: green; }
-            header { border: 1px solid purple; background: purple; }
-            .pageMain { border: 1px solid red; background: red; }
-            footer { border: 1px solid black; background: black; }
+        .containerPage { /* the background here sits over the offcanvas nav (effectively hiding it so the .containerPage can slide left off the top of it */
+            background-image: url('../images/texture-light.png');    
+        }
+            header {  }
+            .pageMain {  }
+            footer {  }
 
             
             
 /* ----- $ContentContainers ----- */
-    .containerCentralContent { border: 1px solid grey; background: grey; }
+    .containerCentralContent { 
+        width: 1000px;
+        margin: 0 auto;
+    }
 
     
     
@@ -194,20 +203,53 @@ body {
 ------------------------------------------------------------ */
 
 /* ----- $BaseText ----- */
-
+    p, ul, ol {
+        margin: 0 0 0.5em 0;
+    }
+    li, li ul, li ol {
+        margin: 0 0 0.25em 0;
+    }
 
 /* ----- $Headings ----- */
+    h1, h2, h3, h4 {
+        margin: 0 0 0.5em 0;
+        text-transform: uppercase; 
+    }
+    h1 { font-size: 30px; font-size: 3.0rem;}
+    h2 { font-size: 25px; font-size: 2.5rem; }
+    h3 { font-size: 20px; font-size: 2.0rem; }
+    h4 { font-size: 15px; font-size: 1.5rem; }
 
-
+    
+    
 /* ----- $Links ----- */
-
+    a {
+        text-decoration: underline;
+        color: #F20056;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+    
 
 /* ----- $SecondaryText ----- */
 
 
 /* ----- $Lists ----- */
-    /* Bulleted */
-    /* Numbered */
+    .bulleted {
+        list-style: disc;
+        margin-left: 15px;
+    }
+    .bulleted ul li:before {
+        content: "- ";
+    }
+    ol {
+        list-style: decimal;
+        margin-left: 20px;
+    }
+    li ol {
+        list-style: lower-latin;
+    }
 
 
 

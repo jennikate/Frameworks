@@ -44,7 +44,7 @@
     }
     #chkMainNav:checked ~ .containerPage {
       left: 80%;
-      background: #FFFFFF;
+      background: url('../images/texture-light.png');   
     }
 
 
