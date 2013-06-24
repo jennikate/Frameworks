@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        <!-- icons -->
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+        
+        <title>TITLE</title>
+                
+        <link rel="stylesheet" href="assets/css/global.css" />
+        <link rel="stylesheet" href="assets/css/global-responsive.css" />
+        <link rel="stylesheet" href="assets/css/off-canvas-nav.css" />
+        
+        
+        <!-- Plugins -->
+        <!-- jQuery -->   <!-- the guide is linking to external jQuery for simplicity - should put a copy locally too! -->
+        <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+        <!-- jQuery Validate -->
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+        <!-- HTML5 shiv -->
+        <!--[if lt IE 9 ]>
+            <script src="http://www.ratedpeople.com/assets/js/html5.js"></script>
+        <![endif]--> 
+        
+        
+        <script src="assets/js/global.js"></script>
+    </head> 
+        
+    <body id="app/page name"> <!-- if we place the name on the body then we can use common classes which can be easily overwritten - rather than having specific classes for things like nav -->
+        <!-- start viewport : used to wrap the content so off canvas nav will work -->
+        <div id="viewport" class="viewport">
+            
+            <!-- this is the mobile off canvas menu -->
+            <input type="checkbox" class="chkMainNav" id="chkMainNav" />
+            <nav id="menuCollapsed" class="menuCollapsed" role="navigation">                
+                <ul class="clearfix">
+                    <li><a class="active" href="#">item1</a></li>
+                    <li><a class="menuHasSubmenu"><span class="subMenuClosed">+</span><span class="subMenuOpened hide">-</span>item2 with submenu</a>
+                        <ul class="subMenu hide">
+                            <li><a href="#">Sub item 1</a></li>
+                            <li><a href="#">Sub item 2</a></li>
+                            <li><a href="#">Sub item 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="active" href="#">item3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- end mobile off canvas menu -->
+            
+            <!-- start main container -->
+            <div id="containerPage" class="containerPage">
+            
+                <header>
+                    <div class="containerCentralContent clearfix">
+                        <!-- for off canvas nav -->
+                        <label for="chkMainNav" class="toggleMenu" onclick></label><!-- empty on click so the checkbox hack works on ios <6 -->
+                        <a class="imgLogo" href="/">Site Name</a>
+                        
+                        <!-- this is the standard nav -->
+                        <nav id="menuGlobal" class="clearfix" role="navigation">
+                            <ul id="menu" class="clearfix">
+                                <li><a href="#">Item1</a></li>
+                                <li class="menuHasSubmenu"><a href="#" onClick="return true">Item2 with Submenu</a>
+                                    <ul class="subMenu">
+                                        <li><a href="#">Sub Item1</a></li>
+                                        <li><a href="#">Sub Item2</a></li>
+                                        <li><a href="#">Sub Item3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Item3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+                
+                <div class="pageMain">
+                    <div class="containerCentralContent clearfix">
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div>
+                </div>
+                <footer>
+                    <div class="containerCentralContent clearfix">
+                        <div class="clearfix">
+                            <!-- Left -->
+                            <ul class="lnkFooter">
+                                <li><h3 class="txtFooterTitle">Title</h3></li>
+
+                                <li><a href="" target="_self">Item</a></li>
+                                <li><a href="" target="_self">Item</a></li>
+                                <li><a href="" target="_self">Item</a></li>
+                            </ul>
+
+                            <!-- Centre -->
+                            <ul class="lnkFooter">
+                                <li><h3 class="txtFooterTitle">Title</h3></li>
+
+                                <li><a href="" target="_self">Item</a></li>
+                                <li><a href="" target="_self">Item</a></li>
+                                <li><a href="" target="_self">Item</a></li>
+                            </ul>
+
+                            <!-- Right -->
+                            <ul class="lnkFooter">
+                                <li><h3 class="txtFooterTitle">Title</h3></li>
+
+                                <li><a href="" target="_self">Item</a></li>
+                                <li><a href="" target="_self">Item</a></li>
+                                <li><a href="" target="_self">Item</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="clearfix">
+                            <!-- Social media links -->
+                            <ul id="lnkSocial" class="lnkSocial clearfix">
+                                <li><a class="spriteSocial imgTwitter" href="" target="_blank"></a></li>
+                                <li><a class="spriteSocial imgLinkedin" href=""></a></li>
+                                <li><a class="spriteSocial imgGithub" href=""></a></li>
+                                <li><a class="spriteSocial imgFacebook" href=""></a></li>
+                                <li><a class="spriteSocial imgTwitter" href=""></a></li>
+                            </ul>
+
+                            <!-- Legal links -->
+                            <p class="txtCopyright">Copyright or Designed by text</p>
+                            <a href="#">Cookies</a>      
+                        </div>
+                    </div>
+                </footer>  
+            </div>
+        <!-- end main container -->
+        </div>
+        <!-- end viewport -->
+    </body>
+</html>

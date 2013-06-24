@@ -1,0 +1,117 @@
+/* =============================================================
+    JENNIKATE WALLACE OFF CANVAS NAV STYLESHEET
+    contains styles for the offcanvas nav
+    
+    NOTE:
+        this should be referenced in the HTML after the global.css and global-responsive.css
+        
+    
+    CONTENTS:
+    
+
+============================================================= */
+
+
+
+/* ------------------------------------------------------------
+    OFF CANVAS NAV
+------------------------------------------------------------ */
+
+/* ----- $CheckboxHack ----- */
+    /* http://css-tricks.com/the-checkbox-hack : used for off canvas nav : I reference this in my global stylesheet just incase the checkbox is accidentally left on a page! */
+    .chkMainNav { display: none; }
+    body { -webkit-animation: bugfix infinite 1s;  /* make checkbox hack work on android */ }
+    @-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} } /* also to make checkbox hack work on android */
+    
+
+    
+/* hide by default : jQuery controls when this gets displayed */
+    .menuCollapsed,
+    .toggleMenu { 
+        display: none; 
+    }
+
+    
+    
+/* ----- $NavContainers ----- */
+    .containerPage {
+      left: 0;
+      top: 0;
+      position: relative;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      height: 100%;
+    }
+    #chkMainNav:checked ~ .containerPage {
+      left: 80%;
+      background: #FFFFFF;
+    }
+
+
+    
+/* ----- $HeaderDesign ----- */
+    .navCollapse header .containerCentralContent { /* reorder elements in header to allow space for menu icon */
+        text-align: center;
+     }
+
+    .navCollapse .toggleMenu { /* unhide the menu icon */
+        display: block;
+        background-image: url("../images/menu-closed.png"); /* REMEMBER TO ADD IMAGES TO LIVE & FIX REF */ 
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 17px;
+        float: left;
+        cursor: pointer;
+    } 
+    .navCollapse .menuCollapsed { /* unhide the off canvas menu */
+        display: block;
+        position: absolute; 
+        top: 0;
+        left: 0;
+        background-color: #272727;
+        width: 80%;  
+    }  
+    .navCollapse #menuGlobal { display: none; } /* hide the wide menu */
+    
+     
+/* ----- $NavDesign ----- */
+    .navCollapse .menuCollapsed ul {
+        width: 100%;
+    }
+    .navCollapse .menuCollapsed a {
+        border-bottom: 1px solid #C5C5C5;
+        color: #FFFFFF;
+        font-weight: normal;
+        text-decoration: none;
+        font-size: 16px;
+        font-size: 1.6rem;
+        display: block;
+        padding: 15px 15px 15px 30px;
+        background-color: #272727;
+    }
+    .navCollapse .menuCollapsed a .subMenuOpened, .navCollapse .menuCollapsed a .subMenuClosed { /* there's a + to show this menu has a secondary menu in it, the link here expands the menu rather than taking you to a page */
+        font-size: 20px;
+        font-size: 2.0rem;
+        margin-right: 7px; 
+    }
+    .navCollapse .menuCollapsed a .subMenuClosed { 
+        margin-left: -20px; /* margin from edge to text is 30px, want to leave 10px on edge then the content here fills the gap: + is 12, - is 7 (5px diff) */
+    }
+    .navCollapse .menuCollapsed a .subMenuOpened { 
+        margin-left: -15px; /* margin from edge to text is 30px, want to leave 10px on edge then the content here fills the gap: + is 12, - is 7 (5px diff) */
+    }
+    .navCollapse .menuCollapsed a:hover, .navCollapse .menuCollapsed a:focus, .navCollapse .menuCollapsed a:active {
+        border-bottom: 1px solid #F20056;
+        background-color: #666666;
+    }
+    .navCollapse .menuCollapsed .imgLogo {
+        margin: -5px 0 -10px -20px;
+    }
+    .navCollapse .menuCollapsed .subMenu a {
+        border-top: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 14px;
+        font-size: 1.4rem;
+    }
+

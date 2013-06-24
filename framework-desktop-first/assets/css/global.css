@@ -1,0 +1,265 @@
+/* =============================================================
+    JENNIKATE WALLACE TEMPLATE STYLESHEET
+    contains default styles 
+    
+    NOTE:
+        I prefer to edit the CSS to change styles rather than the HTML so this framework doesn't use things like .right / .left / .content33 etc. (I have a framework that does that, see ixd guide)
+        uses rem's for fonts with a px fallback (save's all the maths!!)
+        uses ems for vertical padding and px for horizontal
+        uses %'s for widths
+    
+    CONTENTS:
+    // RESETTING THINGS
+    $Reset
+    $BoxSizing
+    $Clearfix
+    $CheckboxHack (for off canvas nav)
+    
+    // DESIGN ELEMENTS
+    $Colors
+    $FontStack
+    $Body
+    $Borders
+    $Backgrounds
+    
+    // CONTAINERS
+    $PageContainers
+    $ContentContainer
+    $NavContainers
+    
+    // TEXT
+    $BaseText
+    $Headings
+    $Links
+    $SecondaryText
+    $Lists
+        $Bulleted
+        $Numbered
+        
+    // IMAGES
+    $Icons
+    $Sprites
+    
+    // GLOBAL DESIGNS
+    $LayoutDesign
+    $HeaderDesign
+    $FooterDesign
+    $NavDesign
+    $PriorityClasses
+
+============================================================= */
+
+
+
+/* ------------------------------------------------------------
+    RESETTING THINGS
+------------------------------------------------------------ */
+
+/* ----- $Reset ----- */
+    /* remove margins, padding, positioning & set to base size */
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+    b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    /* set base styles so can be overwritten with mine */
+    body { line-height: 1; }
+    ol, ul { list-style: none; }
+    blockquote, q { quotes: none; }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+    
+    
+/* ----- $BoxSizing ----- */
+    /* apply a natural box layout model to all elements */
+    * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
+/* ----- $Clearfix ----- */
+    .clearfix:after {
+        content: '.';
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+   
+   
+/* ----- $CheckboxHack ----- */
+    /* http://css-tricks.com/the-checkbox-hack : used for off canvas nav /*/
+    .chkMainNav { display: none; }
+
+
+
+
+/* ------------------------------------------------------------
+    DESIGN ELEMENTS
+------------------------------------------------------------ */
+
+/* ----- $Colors ----- */
+/*  useful sites
+    http://serennu.com/colour/hsltorgb.php
+    http://www.colorhexa.com/
+    
+    Primary         : #F20056   : deep pink  (used for clickable items)
+    Secondary       : #00F29C   : aquaish   
+    Text            : #272727   : black  
+    SecondaryText   : #666666   : grey 
+    NegativeText    : #F2F2F2   : pale grey almost white
+    Borders         : #C5C5C5   : 
+    Errors          : #FDF2F3   : reds
+                      #A6192E
+*/
+    
+ 
+ 
+/* ----- $FontStack ----- */
+@font-face { font-family: mainfont; src: url(../fonts/AvenirLTCom-Book.ttf); }
+
+
+
+/* ----- $Body ----- */
+html { 
+    font-size:62.5%;/* set the browser font size to 10px */
+}
+body {
+    font-size: 14px; font-size: 1.4rem; /* set our base font size to 14px */
+	font-family: mainfont, arial, helvetica, sans-serif;
+	color: #272727;
+    line-height: 150%;
+    -webkit-animation: bugfix infinite 1s;  /* make checkbox hack work on android */
+}
+@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} } /* also to make checkbox hack work on android */
+.viewport { /* allows off canvas nav to work properly, kept as a global style as it's useful structurally */
+    width: 100%;
+    position: relative;
+}
+
+
+
+/* ----- $Borders ----- */
+.bordered {border: 1px solid #CDCFCF}
+
+
+
+/* ----- $Backgrounds ----- */
+    /*background-image: url('../images/texture-light.png'); */
+
+
+
+/* ------------------------------------------------------------
+    CONTAINERS
+------------------------------------------------------------ */
+
+/* ----- $PageContainers ----- */
+    .viewport { border: 1px solid blue; background: blue; }
+
+        .containerPage { border: 1px solid green; background: green; }
+            header { border: 1px solid purple; background: purple; }
+            .pageMain { border: 1px solid red; background: red; }
+            footer { border: 1px solid black; background: black; }
+
+            
+            
+/* ----- $ContentContainers ----- */
+    .containerCentralContent { border: 1px solid grey; background: grey; }
+
+    
+    
+/* ----- $NavContainers ----- */
+
+
+
+/* ------------------------------------------------------------
+    TEXT
+------------------------------------------------------------ */
+
+/* ----- $BaseText ----- */
+
+
+/* ----- $Headings ----- */
+
+
+/* ----- $Links ----- */
+
+
+/* ----- $SecondaryText ----- */
+
+
+/* ----- $Lists ----- */
+    /* Bulleted */
+    /* Numbered */
+
+
+
+
+/* ------------------------------------------------------------
+    IMAGES
+------------------------------------------------------------ */
+
+/* ----- $Icons ----- */
+
+
+/* ----- $Sprites ----- */    
+
+
+
+
+/* ------------------------------------------------------------
+    GLOBAL DESIGNS
+------------------------------------------------------------ */
+
+/* ----- $LayoutDesign ----- */
+
+
+/* ----- $HeaderDesign ----- */    
+
+
+/* ----- $FooterDesign ----- */  
+
+
+/* ----- $NavDesign ----- */  
+
+
+/* ----- $PriorityClasses ----- */  
+.hide { display: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

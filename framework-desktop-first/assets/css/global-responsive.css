@@ -1,0 +1,99 @@
+/* =============================================================
+    JENNIKATE WALLACE TEMPLATE STYLESHEET
+    contains default media queries 
+    
+    NOTE:
+        this framework is desktop first 
+        the off-canvas nav uses jQuery to identify width and serve the nav design that fits, there is no nav changes by media query
+    
+    NOTE:
+        
+    
+    CONTENTS:
+   
+   
+    // RETINA IMAGES 
+    $Tablet
+    $Mobile
+
+============================================================= */
+
+
+
+/* ------------------------------------------------------------
+    TABLET
+------------------------------------------------------------ */
+@media all and (max-width:1023px) { 
+
+   
+    
+    
+
+}
+
+
+
+
+
+/* ------------------------------------------------------------
+    MOBILE : bulk inherited from the table breakpoint
+------------------------------------------------------------ */
+@media screen and (max-width:720px) {
+
+
+}
+
+
+
+
+/* ------------------------------------------------------------
+    RETINA IMAGES
+------------------------------------------------------------ */
+    /* breakpoints for retina imagry
+        720 -  assuming anything under this is a phone in either landscape or portrait mode. 
+        1023 - assuming anything between 720 and this is a tablet around an iPad size
+        1024 - assuming anything this or above is a large tablet (Android) or a laptop/desktop
+    */
+        
+    /* ----- $Common ----- */
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5),
+       screen and (min-device-pixel-ratio: 1.5) {
+        /* use as standard - when images are the same size on all devices */
+     
+		
+    }
+    
+    
+    /* ----- $Desktop (& landscape tablet) ----- */
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1024px),
+           screen and (min-device-pixel-ratio: 1.5) and (min-width: 1024px) {
+            /* use if serving up a different image or a different sized image on wide screens */
+        
+           
+    }
+          
+
+          
+    /* ----- $Tablet ----- */
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1023px),
+           screen and (min-device-pixel-ratio: 1.5) and (max-width: 1023px) {
+            /* use if serving up a different image or a different sized image on medium screens */
+        
+
+        
+    
+    }
+    
+    /* ----- $Mobile ----- */
+    /* this inherits the tablet classes then adds/overwrites some that are mobile specific */
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 720px),
+           screen and (min-device-pixel-ratio: 1.5) and (max-width: 720px) {
+           /* use if serving up a different image or a different sized image on narrow screens */
+    
+
+    }    
+    
+ 
+
+
+
